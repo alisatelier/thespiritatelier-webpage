@@ -7,9 +7,10 @@ export default function HomePage() {
   return (
     <div className="bg-brandlightpink">
       {/* HERO */}
-      <section className="w-full bg-gradient-to-r from-black to-brandnavy text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
+      <section className="w-full bg-gradient-to-r from-black to-brandnavy text-white py-16 ">
+        <div className="max-w-7xl mx-auto px-4 md:px-6 text-center md:text-left sm:text-center">
           <div className="md:flex md:items-center md:gap-12">
+
             {/* Left: text */}
             <div className="space-y-6 md:flex-1">
               <h1 className="font-display text-4xl md:text-6xl leading-tight">
@@ -27,7 +28,8 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <div className="flex flex-wrap gap-3">
+              {/* Button Container */}
+              <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <Link
                   href="/shop"
                   className="px-6 py-3 rounded-xl bg-brandpink text-black shadow hover:bg-brandnavy hover:text-white transition"
@@ -38,7 +40,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: image */}
-            <div className="relative md:w-[520px] md:flex-none mt-10 md:mt-0">
+            <div className="relative md:w-[520px] md:flex-none mt-10 md:mt-0 hidden md:block">
               <div className="relative h-[560px] overflow-hidden rounded-2xl ring-1 ring-white/20 my-8">
                 <Image
                   src="/NorseRunes-Full.jpg"
@@ -127,7 +129,7 @@ export default function HomePage() {
             </div>
 
             {/* Right: text */}
-            <div className="space-y-6 md:flex-1">
+            <div className="space-y-6 md:flex-1 text-center md:text-left sm:text-center">
               <h1 className="font-display text-4xl md:text-6xl leading-tight">
                 FOLLOW <br /> 
                 YOUR INTUITION
@@ -152,7 +154,7 @@ export default function HomePage() {
               </div>
 
               {/* Logo below buttons */}
-              <div className="pt-8">
+              <div className="pt-8 flex justify-center md:justify-start">
                 <Image
                   src="/Logo.WhiteAKBird.png"
                   alt="Author A.K. Bird Logo"

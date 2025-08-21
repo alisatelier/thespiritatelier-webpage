@@ -113,7 +113,7 @@ export default function ProductCarousel({ title, images, href, blurb }: ProductC
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-gray-700">{blurb}</p>
         <span className="inline-flex items-center gap-1 text-brandnavy">
-          Explore <span aria-hidden>→</span>
+         Shop  <span aria-hidden>→</span>
         </span>
       </div>
     </Link>
