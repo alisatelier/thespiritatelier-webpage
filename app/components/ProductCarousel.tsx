@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
+import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import {
   Carousel,
   CarouselContent,
@@ -10,7 +10,7 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from '@/components/ui/carousel';
+} from "@/components/ui/carousel";
 
 interface ProductCarouselProps {
   title: string;
@@ -19,7 +19,12 @@ interface ProductCarouselProps {
   blurb: string;
 }
 
-export default function ProductCarousel({ title, images, href, blurb }: ProductCarouselProps) {
+export default function ProductCarousel({
+  title,
+  images,
+  href,
+  blurb,
+}: ProductCarouselProps) {
   const [api, setApi] = useState<CarouselApi>();
   const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
@@ -69,8 +74,8 @@ export default function ProductCarousel({ title, images, href, blurb }: ProductC
       onMouseLeave={handleMouseLeave}
     >
       <div className="relative aspect-[4/3]">
-        <Carousel 
-          className="w-full h-full" 
+        <Carousel
+          className="w-full h-full"
           setApi={setApi}
           opts={{
             align: "start",
@@ -92,15 +97,15 @@ export default function ProductCarousel({ title, images, href, blurb }: ProductC
               </CarouselItem>
             ))}
           </CarouselContent>
-          
+
           {/* Only show navigation if there are multiple images */}
           {images.length > 1 && (
             <>
-              <CarouselPrevious 
-                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white border-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10" 
+              <CarouselPrevious
+                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white border-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
                 onClick={handleArrowClick}
               />
-              <CarouselNext 
+              <CarouselNext
                 className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white border-none opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-10"
                 onClick={handleArrowClick}
               />
@@ -108,12 +113,12 @@ export default function ProductCarousel({ title, images, href, blurb }: ProductC
           )}
         </Carousel>
       </div>
-      
+
       <div className="p-5 space-y-2">
         <h3 className="text-lg font-semibold">{title}</h3>
         <p className="text-gray-700">{blurb}</p>
-        <span className="inline-flex items-center gap-1 text-brandnavy">
-         Shop  <span aria-hidden>→</span>
+        <span className="inline-flex items-center gap-1 px-5 py-1 rounded-xl bg-brandnavy text-white text-sm hover:bg-brandlightpink hover:text-brandnavy transition">
+          Shop <span aria-hidden>→</span>
         </span>
       </div>
     </Link>

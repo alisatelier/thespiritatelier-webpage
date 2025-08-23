@@ -10,7 +10,6 @@ export default function HomePage() {
       <section className="w-full bg-gradient-to-r from-black to-brandnavy text-white py-16 ">
         <div className="max-w-7xl mx-auto px-4 md:px-6 text-center md:text-left sm:text-center">
           <div className="md:flex md:items-center md:gap-12">
-
             {/* Left: text */}
             <div className="space-y-6 md:flex-1">
               <h1 className="font-display text-4xl md:text-6xl leading-tight">
@@ -23,16 +22,22 @@ export default function HomePage() {
                   Tools & Readings For Intuitive Guidance.
                 </h2>
                 <p className="text-lg text-white">
-                  Featuring Tarot and Norse Runes, alongside a guided Journal to
-                  <br /> anchor your practice.
+                  Featuring Virtual and Physical Tarot and Norse Runes,
+                  <br /> Alongside a Guided Journal to Anchor Your Practice.
                 </p>
               </div>
 
               {/* Button Container */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
                 <Link
-                  href="/shop"
+                  href="/pricing"
                   className="px-6 py-3 rounded-xl bg-brandpink text-black shadow hover:bg-brandnavy hover:text-white transition"
+                >
+                  Start Your Free Trial
+                </Link>
+                <Link
+                  href="/shop"
+                  className="px-6 py-3 rounded-xl border border-brandpink text-brandpink hover:bg-brandnavy hover:text-white hover:border-transparent transition"
                 >
                   Shop the Collection
                 </Link>
@@ -56,9 +61,75 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Virtual Features */}
+      <section className="w-full bg-brandlightpink py-20">
+        <div className="max-w-7xl mx-auto px-4 md:px-6">
+          <div className="text-center space-y-6 max-w-3xl mx-auto mb-12">
+            <h2 className="font-display text-3xl md:text-5xl text-brandnavy">
+              Virtual Readings & Guided Journal
+            </h2>
+            <p className="text-lg text-gray-700">
+              Tap into Tarot and Norse Rune readings from anywhere, and reflect
+              on what matters most in your world with an integrated reading and
+              journaling practice.
+            </p>
+          </div>
+  
+
+          <div className="grid gap-10 md:grid-cols-2">
+            {/* Tarot & Runes */}
+            <div className="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-8 space-y-4 hover:shadow-md transition">
+              <Link href="/features">
+              <h3 className="text-2xl font-bold text-brandnavy">
+                Tarot & Norse Rune Readings
+              </h3>
+              <p className="text-gray-700">
+                Receive intuitive insight through personalized Tarot spreads or
+                rune casting. Delivered digitally with insightful, practical
+                guidance.
+              </p>
+              </Link>
+            </div>
+
+            {/* Digital Journal */}
+            <div className="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-8 space-y-4 hover:shadow-md transition">
+              <Link href="/features">
+                <h3 className="text-2xl font-bold text-brandnavy">
+                  Intuitive Journal
+                </h3>
+                <p className="text-gray-700">
+                  Capture your spreads, to-dos, and reflections in one grounded
+                  space. Fully integrated with your readings.
+                </p>
+              </Link>
+            </div>
+          </div>
+          
+            <div className=" text-brandnavy text-4xl font-bold mt-10 text-center">
+              <h1>
+                Begin Your Journey Inward
+              </h1>
+            </div>
+            <div className=" text-brandnavy font-thin text-center">
+              <p>
+                Sign in to receive your first virtual reading.
+              </p>
+              </div>
+              
+             <div className="flex justify-center mt-4">
+              <Link
+                href="/shop/tarot"
+                className="inline-block mt-4 px-5 py-3 rounded-xl bg-brandnavy text-white border border-transparent hover:bg-brandlightpink hover:border-brandnavy hover:text-brandnavy transition"
+              >
+                Start Your Free Trial
+              </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FEATURED / QUICK SHOP */}
-      <section className="max-w-7xl mx-auto px-4 md:px-6 py-16">
-        <div className="flex items-end justify-between mb-6">
+      <section className="w-full py-16 px-4 md:px-8 bg-brandgrey/10">
+        <div className="flex items-end justify-between mb-6 max-w-7xl mx-auto">
           <h2 className="text-2xl md:text-3xl font-bold text-brandnavy">
             Shop Features:
           </h2>
@@ -131,7 +202,7 @@ export default function HomePage() {
             {/* Right: text */}
             <div className="space-y-6 md:flex-1 text-center md:text-left sm:text-center">
               <h1 className="font-display text-4xl md:text-6xl leading-tight">
-                FOLLOW <br /> 
+                FOLLOW <br />
                 YOUR INTUITION
               </h1>
 
@@ -139,10 +210,14 @@ export default function HomePage() {
                 <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
                   To the novel you need right now.
                 </h2>
-                <p> My Intuition Made Me Do It is a journey though self-discovery and empowerment.</p>
+                <p>
+                  {" "}
+                  My Intuition Made Me Do It is a journey though self-discovery
+                  and empowerment.
+                </p>
               </div>
 
-          {/*Button Container*/}
+              {/*Button Container*/}
 
               <div className="space-y-12">
                 <Link
