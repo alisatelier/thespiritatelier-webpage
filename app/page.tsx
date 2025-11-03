@@ -14,7 +14,7 @@ export default function HomePage() {
             <div className="space-y-6 md:flex-1">
               <h1 className="font-display text-4xl md:text-6xl leading-tight">
                 MAY YOU FIND <br />
-                SPIRIT HERE
+                SPIIT HERE
               </h1>
 
               <div className="space-y-12 pb-12">
