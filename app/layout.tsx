@@ -2,7 +2,7 @@
 import "./globals.css";
 import { Poppins } from "next/font/google";
 import localFont from "next/font/local";
-import Header from ".//components/header";
+import Header from "../components/header";
 
 
 const poppins = Poppins({
@@ -14,12 +14,12 @@ const poppins = Poppins({
 const bloverly = localFont({
   src: [
     {
-      path: "./fonts/BLOVERLY.woff2",
+      path: "../fonts/BLOVERLY.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "./fonts/BLOVERLY.woff",
+      path: "../fonts/BLOVERLY.woff",
       weight: "400",
       style: "normal",
     },

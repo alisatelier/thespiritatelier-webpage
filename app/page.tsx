@@ -1,7 +1,7 @@
 // app/page.tsx
 import Image from "next/image";
 import Link from "next/link";
-import ProductCarousel from "./components/ProductCarousel";
+import ProductCarousel from "../components/ProductCarousel";
 
 export default function HomePage() {
   return (
@@ -12,18 +12,29 @@ export default function HomePage() {
           <div className="md:flex md:items-center md:gap-12">
             {/* Left: text */}
             <div className="space-y-6 md:flex-1">
-              <h1 className="font-display text-4xl md:text-6xl leading-tight">
+              <h1 className="font-display text-5xl md:text-6xl leading-tight">
                 MAY YOU FIND <br />
                 SPIIT HERE
               </h1>
+
+              <div className="relative md:hidden w-full h-48 overflow-hidden rounded-2xl"> {/* hidden on desktop */}
+                <Image
+                  src="/NorseRunes-Full.jpg"
+                  alt="Runes, crystals, and spiritual tools arranged"
+                  fill
+                  className="object-cover object-[50%_45%]"
+                  sizes="100vw"
+                  priority
+                />
+                </div>
 
               <div className="space-y-12 pb-12">
                 <h2 className="text-2xl md:text-3xl font-bold tracking-tight">
                   Tools & Readings For Intuitive Guidance.
                 </h2>
-                <p className="text-lg text-white">
+                <p className="text-lg text-white max-w-lg">
                   Featuring Virtual and Physical Tarot and Norse Runes,
-                  <br /> Alongside a Guided Journal to Anchor Your Practice.
+                  Alongside a Guided Journal to Anchor Your Practice.
                 </p>
               </div>
 
@@ -44,7 +55,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: image */}
+            {/* Right: image // hidden on mobile */ } 
             <div className="relative md:w-[520px] md:flex-none mt-10 md:mt-0 hidden md:block">
               <div className="relative h-[560px] overflow-hidden rounded-2xl ring-1 ring-white/20 my-8">
                 <Image
@@ -74,20 +85,19 @@ export default function HomePage() {
               journaling practice.
             </p>
           </div>
-  
 
           <div className="grid gap-10 md:grid-cols-2">
             {/* Tarot & Runes */}
             <div className="rounded-2xl bg-white shadow-sm ring-1 ring-gray-200 p-8 space-y-4 hover:shadow-md transition">
               <Link href="/features">
-              <h3 className="text-2xl font-bold text-brandnavy">
-                Tarot & Norse Rune Readings
-              </h3>
-              <p className="text-gray-700">
-                Receive intuitive insight through personalized Tarot spreads or
-                rune casting. Delivered digitally with insightful, practical
-                guidance.
-              </p>
+                <h3 className="text-2xl font-bold text-brandnavy">
+                  Tarot & Norse Rune Readings
+                </h3>
+                <p className="text-gray-700">
+                  Receive intuitive insight through personalized Tarot spreads
+                  or rune casting. Delivered digitally with insightful,
+                  practical guidance.
+                </p>
               </Link>
             </div>
 
@@ -104,25 +114,21 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
-          
-            <div className=" text-brandnavy text-4xl font-bold mt-10 text-center">
-              <h1>
-                Begin Your Journey Inward
-              </h1>
-            </div>
-            <div className=" text-brandnavy font-thin text-center">
-              <p>
-                Sign in to receive your first virtual reading.
-              </p>
-              </div>
-              
-             <div className="flex justify-center mt-4">
-              <Link
-                href="/shop/tarot"
-                className="inline-block mt-4 px-5 py-3 rounded-xl bg-brandnavy text-white border border-transparent hover:bg-brandlightpink hover:border-brandnavy hover:text-brandnavy transition"
-              >
-                Start Your Free Trial
-              </Link>
+
+          <div className=" text-brandnavy text-4xl font-bold mt-10 text-center">
+            <h1>Begin Your Journey Inward</h1>
+          </div>
+          <div className=" text-brandnavy font-thin text-center">
+            <p>Sign in to receive your first virtual reading.</p>
+          </div>
+
+          <div className="flex justify-center mt-4">
+            <Link
+              href="/shop/tarot"
+              className="inline-block mt-4 px-5 py-3 rounded-xl bg-brandnavy text-white border border-transparent hover:bg-brandlightpink hover:border-brandnavy hover:text-brandnavy transition"
+            >
+              Start Your Free Trial
+            </Link>
           </div>
         </div>
       </section>
